@@ -1,0 +1,12 @@
+body {
+  font-family: Georgia, serif;
+  background-color: pink;
+}
+
+#title {
+  color: purple;
+}
+
+.restaurant-block {
+  background-color: #f1f1f1;
+}
