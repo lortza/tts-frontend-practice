@@ -3,14 +3,168 @@
 <head>
   <title>Anne Richardson's Portfolio</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Lato:300,700,300italic,700italic' rel='stylesheet' type='text/css'>
+  <!-- Check device width for responsive media queries -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <style type="text/css">
 
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+  background-color: pink;
+  background: url("http://localflavormarketing.com/wp-content/uploads/2014/01/anne-home.jpg") top left no-repeat; 
+  background-size: 2000px;
+  background-attachment:fixed;
+  -webkit-background-size: cover;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0px 0px 2px 0em;
+  padding: 0px -2em;
+  text-align: right;
+}
+
+nav .name {
+  float: left;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  margin: 0px;
+}
+
+nav .navlinks {
+  float: right;
+  margin: 0px;
+}
+
+nav li {
+  display: inline;
+  margin: 0em 2em;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: black;
+}
+
+nav a:hover{
+  color: purple;
+  font-weight: 700;
+}
+
+nav a:active {
+  color: orange;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+.readmore a {
+  color: green;
+  font-size: .7em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding-left: 1em;
+  text-transform: uppercase;
+}
+
+.readmore a:hover {
+  font-weight: 700;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  /*border: 1px solid yellow;*/
+}
+
+.wrapper-right {
+  width: 60%;
+  float: right;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
+  padding: 2%;
+  box-shadow: 2px 2px 5px black;
+}
+
 header {
-  padding: 2em 4em;
-  background-image: url("http://localflavormarketing.com/wp-content/uploads/2014/01/anne-home.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  float: right;
+  max-width: 60%;
+  padding: 0em 1em;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+header h1 {
+  text-align: left;
+  font-size: 4em;
+  margin-bottom: 0px;
+  font-weight: normal;
+
+}
+
+header h2 {
+  text-align: left;
+}
+
+section {
+  clear: both;
+  margin: 0em 0em 2em 0em;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
+  text-align: center;
+}
+
+.service-block {
+  width: 33%;
+  float: left;
+  padding: 0em 0.5em;
+  text-align: center;
+  border: 1px solid pink;
+}
+
+.project-block {
+  overflow: hidden;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.project-block img {
+  float: left;
+  margin-right: 2em;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.project-block-text {
+  text-align: left;
+  margin-left: 1em;
+  line-height: 1.5em;
+}
+
+.project-block-text h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 0px;
 }
 
   i {
@@ -20,57 +174,205 @@ header {
     border-radius: 50%;
   }
 
-  .introtext {
-    display: block;
-    height: 300px;
-    text-align: right;
-    padding-left: 50%;
-    color: white;
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: .75em;
+}
+
+
+/*---------------------------
+        Media Queries
+---------------------------*/
+
+
+@media only screen and (max-width: 800px) {
+  .project-block img {
+  clear: both;
+  margin-bottom: 1em;
   }
+
+.project-block-text {
+  clear: both;
+  margin-bottom: 1em;  
+  }
+
+}/*CLOSES MEDIA QUERY*/
+  
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    /*border: 1px solid yellow;*/
+    }
+
+  .wrapper-right {
+    width: 100%;
+    float: right;
+    background-color: rgba(255, 255, 255, 0.0);
+  }
+
+  header {
+  clear: both;
+  max-width: 100%;
+  padding: 0em 1em;
+  font-size: 70%;
+  }
+
+  .mquery500 {
+  overflow: hidden;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
+  padding: 2%;
+  box-shadow: 2px 2px 5px black;
+  }
+
+  .project-block {
+  overflow: hidden;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1em;
+  padding: 2%;
+  box-shadow: 2px 2px 5px black;
+  }
+
+  .project-block img {
+  float: center;
+  margin-right: 0em;
+  }
+
+.project-block-text h3 {
+  text-align: center;
+  }
+
+} /*CLOSES MEDIA QUERY*/
 
 </style>
 </head>
 
+
+<!-- END CSS  +++++  BEGIN HTML
+ -->
 <body>
 
 <nav>
+  <div class="wrapper">
+  <p class="name">Anne Richardson</p>
+  <div class="navlinks">
   <ul>
     <li><a href="#">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#footprint">Footprint</a></li>
   </ul>
+  </div><!-- CLOSES NAVLINKS -->
+  </div><!-- CLOSES WRAPPER -->
 </nav>
+
+<div class="wrapper">
 <header>
-  <div class="introtext">
-  <h1>Hi, I'm Anne</h1>
-  <h2>... a data nerd with a flair for design and ruby development.</h2>
-  </div> <!-- close introtext -->
+  <h1>Hi, I'm Anne...</h1>
+  <h2>a data nerd with a flair for design and ruby terminal app development</h2>
 </header>
+</div><!-- CLOSES WRAPPER -->
+
+<div class="wrapper">
+<div class="wrapper-right">
 <article>
-  <section>
-    <h2><a name="Services">Services</a></h2>
+
+<!-- SERVICES SECTION -->
+<h2><a name="Services">Services</a></h2>
+  <section class="mquery500">
+    
+
+    <div class="service-block">
     <i class="fa fa-diamond"></i>
-    <h3>Ruby Web App Development</h3>
+    <p>Ruby Web App Development</p>
+    </div>
+    <div class="service-block">
     <p><i class="fa fa-pencil-square-o"></i></p>
-    <h3>Marketing Consulting & Design</h3>
+    <p>Marketing Consulting & Design</p>
+    </div>
+    <div class="service-block">
     <i class="fa fa-book"></i>
-    <h3>eBook Conversion</h3>
+    <p>eBook Conversion</p>
+    </div>
   </section>
+
+<!-- RECENT PROJECTS SECTION -->
+
   <section>
-    <h2><a name="projects">Recent Projects</a></h2>
-    <img src="http://placehold.it/200x200">
-      <p>Mixteka Storyboard</p>
-    <img src="http://placehold.it/200x200">
-      <p>Local Food Summit</p>
-    <img src="http://placehold.it/200x200">
-      <p>Book Design</p>
-    <img src="http://placehold.it/200x200">
-      <p>Game Crafter Games</p>
-    <img src="http://placehold.it/200x200">
-      <p>Item 5</p>
-    <img src="http://placehold.it/200x200">
-      <p>Item 6</p>
+    <h2><a name="projects">Projects</a></h2>
+
+    <div class="project-block">
+      <a href="https://www.youtube.com/watch?v=LSAumIvZpcc&feature=youtu.be" target="_blank">
+      <img src="links/mixteka.png"></a>
+      <div class="project-block-text">
+      <h3>Mixteka Storyboard</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco <span class="readmore"><a href="https://www.youtube.com/watch?v=LSAumIvZpcc&feature=youtu.be" target="_blank">check it out</a></span></p>
+      </div><!-- CLOSES PROJECT-BLOCK-TEXT -->
+    </div><!-- CLOSES PROJECT-BLOCK -->
+
+    <div class="project-block">
+      <a href="https://milehighbiz.org/portfolio/column/4" target="_blank">
+      <img src="links/localfood.png"></a>
+      <div class="project-block-text">
+      <h3>Local First Campaign</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco <span class="readmore"><a href="https://milehighbiz.org/portfolio/column/4" target="_blank">check it out</a></span></p>
+      </div><!-- CLOSES PROJECT-BLOCK-TEXT -->
+    </div><!-- CLOSES PROJECT-BLOCK -->
+
+    <div class="project-block">
+      <img src="http://is.gd/2iSZ3d">
+      <div class="project-block-text">
+      <h3>Book Design</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco</p>
+      </div><!-- CLOSES PROJECT-BLOCK-TEXT -->
+    </div><!-- CLOSES PROJECT-BLOCK -->
+
+    <div class="project-block">
+      <img src="http://is.gd/2iSZ3d">
+      <div class="project-block-text">
+      <h3>Game Crafter Games </h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco</p>
+      </div><!-- CLOSES PROJECT-BLOCK-TEXT -->
+    </div><!-- CLOSES PROJECT-BLOCK -->
+
+    <div class="project-block">
+      <img src="http://is.gd/2iSZ3d">
+      <div class="project-block-text">
+      <h3>Item 5 </h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco</p>
+      </div><!-- CLOSES PROJECT-BLOCK-TEXT -->
+    </div><!-- CLOSES PROJECT-BLOCK -->
+
+    <div class="project-block">
+      <img src="http://placehold.it/200x200">
+      <div class="project-block-text">
+      <h3>Item 6</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco</p>
+      </div><!-- CLOSES PROJECT-BLOCK-TEXT -->
+    </div><!-- CLOSES PROJECT-BLOCK -->
+
   </section>
   <section>
     <h2><a name="footprint">My Footprint</a></h2>
@@ -84,6 +386,8 @@ header {
     <p>[contact]</p>
   </section>
 </article>
+</div><!-- closes wrapper-right -->
+</div><!-- closes wrapper -->
 
 <footer>Copyright 2015... and pretty much forever. Come, be inspired, but don't steal without crediting. You dig?</footer>
 
