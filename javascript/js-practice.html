@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript and JQuery</title>
+  <!--JQuery library-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+  <h1>HOLLA.</h1>
+
+  <div id="my-element">
+  This is my div. Click on me and see what happens. 
+  </div>
+
+
+  <script type="text/javascript">
+  // this loads an alert box upon page load
+    // alert("Hey Look! This page just loaded.")
+    // console.log(alert);
+
+ //this pops up an alert when you click on the div contents
+    // $("#my-element")
+    // .show()
+    // .addClass("selectable")
+    // .click(function (e){
+    //   alert("You clicked me");
+    // })
+
+    // this gets an attribute's value
+    var div_id = $("div").attr("id");
+    console.log(div_id);
+
+    // sets a css ID of "your-element" to the div tag
+    $("div").attr("id", "your-element");
+
+    // sets a css CLASS of "special" to the div tag
+    $("div").addClass("special");
+
+    // removes the a css CLASS of "special" from the div tag
+    $("div").removeClass("special"); 
+
+    // removes "special" CLASS from anywhere the CLASS "selectable" exists
+    $(".selectable").removeClass("special"); 
+
+    // Adds or removes CLASS "special" to/from elemennts with an ID of "your-element"
+    $("#your-element").toggleClass("special");
+
+    //check whether a class exists, then 
+    if ($("div").hasClass("special")){
+      alert("it's special!");
+        } else {
+          alert("it's normal (not special)");
+        }
+
+    // make the div show it's text when it is clicked
+    $(function(){
+      $("#my-element").click(function (e){
+        var paragraphText = $(e.target).text();
+        alert(paragraphText);
+      });
+    });
+
+
+    // Make p tag slide up
+    $(function(){
+      $("p").click(function (e){
+        $(e.target).slideUp();
+      });
+    });
+
+
+
+  </script>
+
+</body>
+</html>
